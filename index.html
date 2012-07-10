@@ -1,10 +1,108 @@
 <!DOCTYPE HTML>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-   placeholder 
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Arale</title>
+        <link rel="stylesheet" href="./assets/style.css" />
+        <!--[if lt IE 9]>
+        <script type="text/javascript" src="./assets/html5shiv.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript" src="http://seajs.org/dist/sea.js"></script>
+    </head>
+    <body>
+        <header id="header">
+            <div class="container">
+                <hgroup>
+                <h1>Arale</h1>
+                </hgroup>
+                <nav id="nav" role="navigation" class="clearfix">
+                    <a class="github" href="https://github.com/alipay/arale">GitHub</a>
+                    <a href="">关于</a>
+                    <a href="">关于</a>
+                </nav>
+            </div>
+        </header>
+        <div id="main">
+            <div class="container">
+                <article>
+                    <p>Arale 是一个开放、简单、易用的前端基础类库。</p>
+                </article>
+                <div id="slide" class="clearfix">
+                    <section id="infrastructure">
+                        <h3>Infrastructure</h3>
+                        <p>底层基础</p>
+                        <ul>
+                            <li><a href="#">seajs</a></li>
+                            <li><a href="#">events</a></li>
+                            <li><a href="#">class</a></li>
+                            <li><a href="#">base</a></li>
+                            <li><a href="#">widget</a></li>
+                        </ul>
+                    </section>
+                    <section id="utilities">
+                        <h3>Utilities</h3>
+                        <ul>
+                            <li><a href="#">jquery</a></li>
+                            <li><a href="#">zepto</a></li>
+                            <li><a href="#">cookie</a></li>
+                            <li><a href="#">json</a></li>
+                            <li><a href="#">underscore</a></li>
+                            <li><a href="#">handlebars</a></li>
+                            <li><a href="#">jasmine</a></li>
+                            <li><a href="#">moment</a></li>
+                            <li><a href="#">iframe-shim</a></li>
+                            <li><a href="#">swfobject</a></li>
+                            <li><a href="#">backbone</a></li>
+                            <li><a href="#">position</a></li>
+                            <li><a href="#">placeholder</a></li>
+                            <li><a href="#">store</a></li>
+                            <li><a href="#">async</a></li>
+                        </ul>
+                    </section>
+                    <section id="widgets">
+                        <h3>Widgets</h3>
+                        <ul>
+                            <li><a href="#">overlay</a></li>
+                            <li><a href="#">dialog</a></li>
+                            <li><a href="#">switchable</a></li>
+                            <li><a href="#">popup</a></li>
+                            <li><a href="#">validator</a></li>
+                            <li><a href="#">calendar</a></li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="wrapper clearfix">
+                    <div id="github-issues">
+                        <h3>GitHub Issues</h3>
+                        <ul id="issues">
+                            <li>Loading ...</li>
+                        </ul>
+                    </div>
+                    <div id="contacts">
+                        <h3>Contacts</h3>
+                        <ul>
+                            <li><a href="https://groups.google.com/forum/#!forum/aralejs">邮件列表</a></li>
+                            <li>阿里旺旺群：66486486（加入密码：aralejs.org）</li>
+                            <li>QQ 群：59443088</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+            <div class="container">
+                <div class="links">
+                    <p class="copyright">&copy; 2012 Alipay.com. All rights reserved.</p>
+                </div>
+                <div class="logos">
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript">
+            seajs.use('./assets/github', function(github) {
+                github('alipay/arale').issues();
+            });
+        </script>
+    </body>
 </html>

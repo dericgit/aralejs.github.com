@@ -1,0 +1,329 @@
+@import url(//fonts.googleapis.com/css?family=Signika);
+@import url(//fonts.googleapis.com/css?family=PT%20Sans);
+body {
+    color: #444;
+    padding: 0;
+    margin: 0;
+    font: 16px/1.62 "Signika", "Xin Gothic", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, strong {
+    font-family: "PT Sans", "Xin Gothic", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
+h1 {
+    margin-top: 0;
+    font-size: 28px;
+}
+h2 {
+    font-size: 22px;
+    margin: 45px 0 15px;
+}
+h3 {
+    font-size: 18px;
+    margin: 30px 0 10px;
+}
+
+/* block level */
+blockquote {
+    border-left: 0.4em solid #ddd;
+    margin: 15px 0;
+    padding: 0 15px;
+    color: #777;
+}
+blockquote blockquote {
+    padding: 0 0 0 1em;
+    margin-left: 2em;
+    border-left: 0.4em solid #ddd;
+}
+p {
+    font-weight: normal;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+figure {margin:0; padding:0;}
+
+hr {
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+}
+
+ul, ol {
+    margin: 14px 0;
+    padding-left: 30px;
+}
+ul {
+    list-style: square;
+}
+li ul {
+    list-style: disc;
+    margin: 8px 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: #bbb;
+}
+table tr:nth-child(2n) {
+    background: #eee;
+}
+table th, table td {
+    text-align: left;
+    padding: 4px 6px;
+}
+/* span level */
+img {
+    max-width: 100%;
+}
+a {
+    color: #000;
+    text-decoration: none;
+    overflow: hidden;
+    word-wrap: break-word;
+    border-bottom: 1px dotted #ddd;
+    border-bottom: 1px dotted rgba(0,0,0,0.2);
+}
+a:hover {
+    color: #d14;
+    cursor: pointer;
+    -webkit-transition: color .3s ease;
+    -moz-transition: color .3s ease;
+    transition: color .3s ease;
+}
+a img {
+    vertical-align: middle;
+}
+strong {
+    color: #424242;
+}
+
+/* code */
+pre, code, tt {
+    font: 14px "Menlo", monospace;
+}
+pre {
+    margin: 1em 0;
+    background-color: #fbfbfb;
+    border: 1px solid #ddd;
+    padding: 8px;
+    line-height: 1.5em;
+    color: #444;
+    overflow: auto;
+    box-shadow: rgba(0,0,0,0.07) 0 1px 2px inset;
+    border-radius: 3px;
+}
+code, tt {
+    background-color: #fee9cc;
+    color: rgba(0, 0, 0, 0.75);
+    padding: 1px 3px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+pre code {
+    padding: 0;
+    color: #444;
+    border: none;
+    background: inherit;
+}
+
+/* form */
+textarea, input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 5px 8px;
+}
+textarea:focus, input:focus {
+    border-color: #999;
+    outline: 0 none;
+}
+
+/* extra */
+hr.end {
+    display: block;
+    margin: 30px 0;
+    clear: both;
+    border: 0 none;
+    height: 10px;
+    text-align: center;
+    background: url("end.png") no-repeat 50% 50%;
+}
+.clearfix {
+    zoom: 1;
+}
+.clearfix:after {
+    display: block;
+    content: " ";
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+}
+.container {
+    padding: 0 40px;
+}
+@media (max-width: 560px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+/* layout */
+#header {
+    position: relative;
+    background: #f4f4f4;
+    box-shadow: 0 0 5px #ccc;
+    height: 46px;
+    width: 100%;
+}
+#nav {
+    position: absolute;
+    top: 0;
+    right: 40px;
+}
+#nav a {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    line-height: 46px;
+    border-bottom: 0 none;
+}
+#nav a:hover {
+    color: white;
+    background: rgba(20, 100, 180, 0.8);
+}
+#nav .github {
+    font-family: "Lucida Grande", "Helvetica", sans-serif;
+}
+#nav .github:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+#main {
+    overflow: hidden;
+    padding: 0 0 80px;
+    background: url('efefef.jpg');
+}
+#slide section {
+    float: left;
+    position: relative;
+    width: 33%;
+    height: 220px;
+    text-align: center;
+    color: #eee;
+    border-bottom: 0 none;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform .2s ease-out;
+    -moz-transition: -moz-transform .2s ease-out;
+    transition: transform .2s ease-out;
+}
+#slide section:hover {
+    color: #fff;
+    -webkit-transform: scaleY(1.1);
+    -moz-transform: scaleY(1.1);
+    transform: scaleY(1.1);
+}
+#slide ul {
+    position: absolute;
+    bottom: -210px;
+    left: 0;
+    width: 100%;
+    height: 190px;
+    line-height: 24px;
+    vertical-align: middle;
+    color: white;
+    background-color: rgba(0,0,0,0.76);
+    text-align: left;
+    text-indent: 14px;
+
+    list-style-type: none;
+    padding: 20px 0 0;
+    margin: 0;
+    zoom: 1;
+
+    -webkit-transition: bottom .2s ease-out;
+    -moz-transition: bottom .2s ease-out;
+    transition: bottom .2s ease-out;
+}
+#slide ul:after {
+    display: block;
+    content: " ";
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    font-size: 0;
+}
+#slide li {
+    float: left;
+}
+#slide a {
+    color: white;
+}
+#slide section:hover ul {
+    bottom: 0;
+}
+#infrastructure {
+    background: rgba(60, 150, 10, 0.8);
+}
+#infrastructure ul {
+    height: 40px;
+    bottom: -60px;
+}
+@media (max-width: 860px) {
+    #infrastructure ul {
+        height: 70px;
+        bottom: -90px;
+    }
+}
+#utilities {
+    background: rgba(230, 10, 0, 0.8);
+}
+#widgets {
+    background: rgba(20, 100, 180, 0.8);
+}
+#widgets ul {
+    height: 70px;
+    bottom: -90px;
+}
+@media (max-width: 860px) {
+    #widgets ul {
+        height: 100px;
+        bottom: -120px;
+    }
+}
+
+#footer {
+    clear: both;
+    background: #fff;
+    border-top: 1px solid #dadada;
+}
+
+
+/* issues */
+.wrapper li {
+    margin: 8px 0;
+}
+#github-issues {
+    float: left;
+    width: 60%;
+    margin-right: 20px;
+}
+#contacts {
+    float: left;
+    width: 30%;
+}
+#issues .date {
+    color: rgba(0,0,0,0.6);
+    font-size: 14px;
+    margin-right: 6px;
+}
+#issues .label {
+    font-size: 12px;
+    border-radius: 3px;
+    color: white;
+    padding: 2px 8px 0;
+    position: relative;
+    top: -4px;
+    left: 4px;
+    background: rgba(100, 80, 190, 0.8);
+    border: 1px solid rgba(100, 80, 190, 0.9);
+}
