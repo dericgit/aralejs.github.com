@@ -147,7 +147,7 @@ hr.end {
     border: 0 none;
     height: 10px;
     text-align: center;
-    background: url("end.png") no-repeat 50% 50%;
+    background: url("img/end.png") no-repeat 50% 50%;
 }
 .clearfix {
     zoom: 1;
@@ -201,7 +201,7 @@ hr.end {
 #main {
     overflow: hidden;
     padding: 0 0 80px;
-    background: url('efefef.jpg');
+    background: url('img/efefef.jpg');
 }
 #slide section {
     float: left;
@@ -212,15 +212,13 @@ hr.end {
     color: #eee;
     border-bottom: 0 none;
     overflow: hidden;
-    -webkit-transition: -webkit-transform .2s ease-out;
-    -moz-transition: -moz-transform .2s ease-out;
-    transition: transform .2s ease-out;
+    -webkit-transition: background-position .2s ease-out;
+    -moz-transition: background-position .2s ease-out;
+    transition: background-position .2s ease-out;
 }
 #slide section:hover {
     color: #fff;
-    -webkit-transform: scaleY(1.1);
-    -moz-transform: scaleY(1.1);
-    transform: scaleY(1.1);
+    background-position: center 95%;
 }
 #slide ul {
     position: absolute;
@@ -262,7 +260,7 @@ hr.end {
     bottom: 0;
 }
 #infrastructure {
-    background: rgba(60, 150, 10, 0.8);
+    background: rgba(60, 150, 10, 0.8) url('img/infrastructure.png') no-repeat 95% 95%;
 }
 #infrastructure ul {
     height: 40px;
@@ -275,10 +273,10 @@ hr.end {
     }
 }
 #utilities {
-    background: rgba(230, 10, 0, 0.8);
+    background: rgba(230, 10, 0, 0.8) url('img/utilities.png') no-repeat 95% 95%;
 }
 #widgets {
-    background: rgba(20, 100, 180, 0.8);
+    background: rgba(20, 100, 180, 0.8) url('img/widgets.png') no-repeat 95% 95%;
 }
 #widgets ul {
     height: 70px;
