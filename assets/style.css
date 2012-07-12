@@ -307,7 +307,7 @@ hr.end {
     width: 60%;
     margin-right: 20px;
 }
-#contacts {
+#sidebar {
     float: left;
     width: 30%;
 }
@@ -326,4 +326,20 @@ hr.end {
     left: 4px;
     background: rgba(100, 80, 190, 0.8);
     border: 1px solid rgba(100, 80, 190, 0.9);
+}
+.avatar a {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    padding: 2px;
+    margin-bottom: 6px;
+}
+.avatar img {
+    height: 48px;
+    width: 48px;
+}
+.avatar a:hover {
+    opacity: 0.8;
+    border-color: #bbb;
 }
