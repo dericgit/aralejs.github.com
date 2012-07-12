@@ -161,6 +161,8 @@ hr.end {
     font-size: 0;
 }
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 40px;
 }
 @media (max-width: 560px) {
@@ -218,7 +220,7 @@ hr.end {
 }
 #slide section:hover {
     color: #fff;
-    background-position: center 95%;
+    background-position: 90% 95%;
 }
 #slide ul {
     position: absolute;
