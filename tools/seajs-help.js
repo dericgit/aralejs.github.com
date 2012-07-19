@@ -1,6 +1,7 @@
 ;(function() {
   var reserved = [
-    'jquery', 'zepto', 'json', 'jasmine', 'underscore', 'handlebars'
+    'jquery', 'zepto', 'json', 'jasmine', 'underscore', 'handlebars',
+    'seajs'
   ]
   var alipayBase = 'https://a.alipayobjects.com/static/arale/'
   var githubBase = 'https://raw.github.com/aralejs/'
@@ -13,7 +14,7 @@
       }
     }
 
-    url = url.replace(/\/([a-z\-]*\.js)$/g, 'src/$1')
+    url = url.replace(/\/([a-z\-]*\.js)$/g, '/src/$1')
     return url;
   })
 
