@@ -14,11 +14,13 @@
       }
     }
 
-    url = url.replace(/\/([a-z\-]*\.js)$/g, '/src/$1')
+    url = url.replace(
+        /\/(\d+\.\d+\.\d+|master)\/([a-z\-]*\.js)$/g,
+        '/$1/src/$2'
+    )
     return url;
   })
 
-  // [/^(?:#|[a-z\d-]*\/)[a-z\d-]*\/\d+\.\d+\.\d+\/([a-z\d-]*)$/g, '../src/$1']
 
   seajs.config({
     base: githubBase,
