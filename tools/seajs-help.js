@@ -1,7 +1,7 @@
 ;(function() {
   var reserved = [
     'jquery', 'zepto', 'json', 'jasmine', 'underscore', 'handlebars',
-    'seajs'
+    'seajs', 'moment', 'async', 'store', 'swfobject', 'backbone'
   ]
   var alipayBase = 'https://a.alipayobjects.com/static/arale/'
   var githubBase = 'https://raw.github.com/aralejs/'
