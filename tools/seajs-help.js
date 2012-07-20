@@ -7,8 +7,8 @@
   var githubBase = 'https://raw.github.com/aralejs/'
   var rules = []
   rules.push(function(url) {
-    for(var i = 0; i < reserved.length; i++) {
-      if(url.indexOf(reserved[i]) > 0) {
+    for (var i = 0; i < reserved.length; i++) {
+      if (url.indexOf(reserved[i]) > 0) {
         url = url.replace(githubBase, alipayBase)
         return url;
       }
@@ -18,6 +18,9 @@
         /\/(\d+\.\d+\.\d+|master)\/([a-z\-]*\.js)$/g,
         '/$1/src/$2'
     )
+    if (url.indexOf('src') < 0 || url.indexOf('dist') < 0) {
+        url.replace(githubBase, '../src/')
+    }
     return url;
   })
 
@@ -39,15 +42,15 @@
     ]
   })
 
-  var isSetAlias = false
+  var readPackage = false
   var use = seajs.use
   seajs.use = function(ids, callback) {
     use.call(seajs, ['../package.json'], function(data) {
-      if (data.devDependencies && !isSetAlias) {
+      if (data.devDependencies && !readPackage) {
         seajs.config({
           alias: data.devDependencies
         })
-        isSetAlias = true
+        readPackage = true
       }
       use.call(seajs, ids, callback)
     })
