@@ -19,7 +19,7 @@
         '/$1/src/$2'
     )
     if (url.indexOf('src') < 0 || url.indexOf('dist') < 0) {
-        url.replace(githubBase, '../src/')
+        url = url.replace(githubBase, '../src/')
     }
     return url;
   })
