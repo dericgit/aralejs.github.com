@@ -18,7 +18,7 @@
         /\/(\d+\.\d+\.\d+|master)\/([a-z\-]*\.js)$/g,
         '/$1/src/$2'
     )
-    if (url.indexOf('src') < 0 || url.indexOf('dist') < 0) {
+    if (url.indexOf('src') < 0 && url.indexOf('dist') < 0) {
         url = url.replace(githubBase, '../src/')
     }
     return url;
