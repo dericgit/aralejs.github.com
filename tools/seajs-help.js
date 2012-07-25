@@ -64,7 +64,7 @@
         var i;
         for (i in object) {
           if (object.hasOwnProperty(i)) {
-            (i !== '$') && target[i] = object[i];
+            (i !== '$') && (target[i] = object[i]);
           }
         }
       }
