@@ -49,13 +49,25 @@
   var use = seajs.use
   seajs.use = function(ids, callback) {
     use.call(seajs, ['../package.json'], function(data) {
-      if (data.devDependencies && !readPackage) {
+      if (data.dependencies && !readPackage) {
+        var alias = {};
+        mixin(alias, data.dependencies);
+        data.devDependencies && mixin(alias, data.devDependencies);
         seajs.config({
-          alias: data.devDependencies
+          alias: alias
         })
         readPackage = true
       }
       use.call(seajs, ids, callback)
+
+      function mixin(target, object) {
+        var i;
+        for (i in object) {
+          if (object.hasOwnProperty(i)) {
+            target[i] = object[i];
+          }
+        }
+      }
     })
   }
 })()
