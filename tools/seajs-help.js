@@ -8,7 +8,7 @@
   var rules = []
   rules.push(function(url) {
     for (var i = 0; i < reserved.length; i++) {
-      if (url.indexOf(reserved[i]) > 0) {
+      if (url.indexOf(reserved[i]+'/') > 0) {
         url = url.replace(githubBase, alipayBase)
         return url;
       }
