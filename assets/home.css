@@ -9,11 +9,11 @@
     }
 }
 #header {
-    padding: 26px 0 18px;
-    background: #f6f9f8 url(img/bg-line.jpg) repeat-x;
+    padding: 20px 0 18px;
+    background: #1a1a1a url(img/bg-line.jpg) repeat-x 0 100%;
     border-bottom: 1px solid #e6e9e8;
     text-transform: uppercase;
-    font: 16px/1.5 "Helvetica Nenue", arial, sans-serif;
+    font: 16px/1.5 "Helvetica Neue", arial, sans-serif;
 }
 #header a {
     color: #969998;
@@ -41,29 +41,45 @@
     z-index: -9;
 }
 #banner img {
+    float: left;
     width: 100%;
 }
 #banner p {
     position: absolute;
-    top: 23%;
-    left: 38%;
-    font-size: 18px;
-    color: #fff;
+    top: 28%;
+    left: 53%;
+    font-size: 16px;
+    color: #ddba7b;
+    text-shadow: 0 1px 0 #fff;
 }
-#category {
+@media (max-width: 640px) {
+    #banner p {
+        display: none;
+    }
+}
+#banner .arale {
+    font-size: 32px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 300;
+    color: #4ebbb2;
+}
+#module-list {
     border-bottom: 1px solid #e6e9e8;
+    padding: 0 0 20px;
+    text-align: center;
 }
 #category .tab {
-    display: inline-block;
-    margin: 0 1% 0 0;
-    width: 32%;
+    float: left;
+    margin: 0;
+    width: 33%;
 }
 #category .tab:last-of-type {
     margin-right: 0;
 }
 #category a {
     display: block;
-    border-bottom: 3px solid;
+    border-top: 3px solid;
+    border-bottom: 0;
 }
 #category .tab-infrastructure a {
     border-color: #89C237;
@@ -74,22 +90,14 @@
 #category .tab-widgets a {
     border-color: #01ACE2;
 }
-#module-list {
-    background-color: #f6f9f8;
-    border-bottom: 1px solid #e6e9e8;
-    padding: 10px 0 20px;
-}
-#module-list p {
-    padding: 5px 0 10px;
-    margin: 0;
-}
-#module-list ul {
+.modules ul {
+    display: inline-block;
     list-style-type: none;
     padding: 0;
     margin: 0;
     zoom:1;
 }
-#module-list ul:after {
+.modules ul:after {
     visibility:hidden;
     display:block;
     font-size:0;
@@ -97,16 +105,21 @@
     clear:both;
     height:0;
 }
-#module-list li {
+.modules li {
     float: left;
     margin-bottom: 8px;
 }
-#module-list a {
+.modules a {
     display: inline-block;
     padding: 2px 8px;
     margin-right: 4px;
     border-bottom: 0 none;
     color: #fff;
+}
+@media (max-width: 640px) {
+    .modules p {
+        text-align: left;
+    }
 }
 #module-list a:hover {
     opacity: 0.8;
@@ -121,13 +134,20 @@
     background-color: #01ACE2;
 }
 #community {
+    overflow: hidden;
     font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+    background-color: #f6f9f8;
 }
 #footer {
     padding: 10px 0;
     text-align: right;
-    font-family: sans-serif;
-    color: #d7dddb;
-    background: #f6f9f8;
+    font-size: 12px;
+    font-family: "Helvetica Neue", sans-serif;
+    color: #7b8080;
+    background: #1a1a1a url(img/bg-line.jpg) repeat-x 100% 0;
     border-top: 1px solid #e6e9e8;
+}
+#footer a {
+    color: #7b8080;
+    border: 0 none;
 }

@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
         <title>Arale</title>
         <link rel="stylesheet" href="./assets/base.css" />
         <link rel="stylesheet" href="./assets/home.css" />
@@ -14,35 +15,33 @@
     <body>
         <header id="header">
             <div class="container fn-clear">
-                <a id="logo" href="/" title="Home" class="icon-home">Home</a>
+                <a id="logo" href="/" title="Home" class="icon-home">首页</a>
                 <nav id="nav" role="navigation">
-                    <a href="#community" class="icon-comments-alt">Community</a>
-                    <a href="https://github.com/aralejs" class="icon-github">Github</a>
-                    <a href="#about" class="icon-group">About</a>
+                    <a href="#community" class="icon-comments-alt">社区</a>
+                    <a href="#about" class="icon-group">关于</a>
+                    <a href="https://github.com/aralejs" class="icon-github">源码</a>
                 </nav>
             </div>
         </header>
-        <div id="banner">
-            <img src="./assets/img/banner.png" alt="banner" />
-            <p>Arale 是一个开放、简单、易用的前端基础类库。</p>
+        <div id="banner" class="fn-clear">
+            <p><span class="arale">Arale</span> <br />是一个开放、简单、易用的前端基础类库。</p>
+            <img src="./assets/img/banner.jpg" alt="banner" />
         </div>
-        <div id="category">
-            <div class="container fn-clear">
-                <h3 class="tab tab-infrastructure">
-                    <a href="#infrastructure">Infrastructure</a>
-                </h3>
-                <h3 class="tab tab-utilities">
-                    <a href="#utilities">Utilities</a>
-                </h3>
-                <h3 class="tab tab-widgets">
-                    <a href="#widgets">Widgets</a>
-                </h3>
-            </div>
-        </div>
-        <section id="module-list">
+        <div id="module-list">
             <div class="container">
+                <div id="category" class="fn-clear">
+                    <h3 class="tab tab-infrastructure">
+                        <a href="#infrastructure">基础</a>
+                    </h3>
+                    <h3 class="tab tab-utilities">
+                        <a href="#utilities">工具</a>
+                    </h3>
+                    <h3 class="tab tab-widgets">
+                        <a href="#widgets">组件</a>
+                    </h3>
+                </div>
                 <div id="infrastructure" class="modules">
-                    <p>Infrastructure is ...</p>
+                    <p>这是整个类库的基础，能从底层让代码的书写规范、组件的构建方式、模块的调用方式等保持整体一致性。</p>
                     <ul>
                         <li><a href="http://seajs.org/docs/">seajs</a></li>
                         <li><a href="/events/">events</a></li>
@@ -52,7 +51,7 @@
                     </ul>
                 </div>
                 <div id="utilities" class="modules">
-                    <p>Utilities are ...</p>
+                    <p>工具组件的特点是，它们是锤子、斧头，其他组件只是通过纯组合的方式使用它们。工具组件里，大部分将直接来自社区已有的成熟组件。</p>
                     <ul>
                         <li><a href="#">jquery</a></li>
                         <li><a href="#">zepto</a></li>
@@ -73,7 +72,7 @@
                     </ul>
                 </div>
                 <div id="widgets" class="modules">
-                    <p>Widgets are ...</p>
+                    <p>目前 jQuery 社区和 CommonJS 等社区尚未有很好用很成熟的 UI 解决方案，因此 UI 类组件大部分将自主研发。这将会是 Arale 类库的核心亮点之一。</p>
                     <ul>
                         <li><a href="/overlay/">overlay</a></li>
                         <li><a href="/dialog/">dialog</a></li>
@@ -85,25 +84,25 @@
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
         <div id="community">
             <div class="container">
-                <h3>Contribute</h3>
+                <h3>参与开发</h3>
                 <p>AraleJS is a collection of ...</p>
 
-                <h3>Contact</h3>
+                <h3>联系我们</h3>
                 <ul>
                     <li><a href="https://groups.google.com/forum/#!forum/aralejs">邮件列表</a></li>
                     <li>阿里旺旺群：66486486（加入密码：aralejs.org）</li>
                     <li>QQ 群：59443088</li>
                 </ul>
 
-                <h3 id="about">About us</h3>
+                <h3 id="about">关于我们</h3>
                 <p>...</p>
             </div>
         </div>
         <footer id="footer">
-            <p class="container">&copy; 2012 Alipay.com All rights reserved.</p>
+            <p class="container">&copy; 2012 aralejs.org All rights reserved. Design inspired by <a href="http://www.insided.nl/">INSIDED</a>.</p>
         </footer>
         <script type="text/javascript">
             seajs.use('#jquery/1.7.2/jquery', function($) {
