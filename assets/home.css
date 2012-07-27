@@ -13,7 +13,7 @@
     background: #f6f9f8 url(img/bg-line.jpg) repeat-x;
     border-bottom: 1px solid #e6e9e8;
     text-transform: uppercase;
-    font: 16px/1.5 sans-serif;
+    font: 16px/1.5 "Helvetica Nenue", arial, sans-serif;
 }
 #header a {
     color: #969998;
@@ -42,16 +42,20 @@
 }
 #banner img {
     width: 100%;
-    opacity: 0.6;
+}
+#banner p {
+    position: absolute;
+    top: 23%;
+    left: 38%;
+    font-size: 18px;
+    color: #fff;
 }
 #category {
-    padding-bottom: 20px;
-    background-color: #fff;
+    border-bottom: 1px solid #e6e9e8;
 }
 #category .tab {
-    float: left;
-    margin-top: -32px;
-    margin-right: 1%;
+    display: inline-block;
+    margin: 0 1% 0 0;
     width: 32%;
 }
 #category .tab:last-of-type {
@@ -60,9 +64,6 @@
 #category a {
     display: block;
     border-bottom: 3px solid;
-}
-#category h3 {
-    margin: 0;
 }
 #category .tab-infrastructure a {
     border-color: #89C237;
@@ -75,9 +76,12 @@
 }
 #module-list {
     background-color: #f6f9f8;
-    border-top: 1px solid #e6e9e8;
     border-bottom: 1px solid #e6e9e8;
     padding: 10px 0 20px;
+}
+#module-list p {
+    padding: 5px 0 10px;
+    margin: 0;
 }
 #module-list ul {
     list-style-type: none;
@@ -116,7 +120,9 @@
 #widgets a {
     background-color: #01ACE2;
 }
-
+#community {
+    font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
+}
 #footer {
     padding: 10px 0;
     text-align: right;
