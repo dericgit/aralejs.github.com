@@ -20,7 +20,7 @@
     border-bottom: 0 none;
 }
 #header a:hover {
-    color: #565958;
+    color: #ececec;
 }
 #header a:before {
     margin-right: 4px;
@@ -67,6 +67,9 @@
     border-bottom: 1px solid #e6e9e8;
     padding: 0 0 20px;
     text-align: center;
+}
+#module-list .container {
+    overflow: hidden;
 }
 #category .tab {
     float: left;
