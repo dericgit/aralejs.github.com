@@ -3,116 +3,144 @@
     <head>
         <meta charset="UTF-8">
         <title>Arale</title>
+        <link rel="stylesheet" href="./assets/base.css" />
         <link rel="stylesheet" href="./assets/home.css" />
+        <link rel="stylesheet" href="./assets/fontawesome/css/font-awesome.css" />
+        <script type="text/javascript" src="https://a.alipayobjects.com/static/arale/seajs/1.2.0/sea.js"></script>
         <!--[if lt IE 9]>
         <script type="text/javascript" src="./assets/html5shiv.js"></script>
         <![endif]-->
-
-        <script type="text/javascript" src="http://seajs.org/dist/sea.js"></script>
     </head>
     <body>
         <header id="header">
-            <div class="container">
-                <hgroup>
-                <h1>Arale</h1>
-                </hgroup>
-                <nav id="nav" role="navigation" class="clearfix">
-                    <a class="github" href="https://github.com/alipay/arale">GitHub</a>
-                    <a href="">关于</a>
-                    <a href="">关于</a>
+            <div class="container fn-clear">
+                <a id="logo" href="/" title="Home" class="icon-home">Home</a>
+                <nav id="nav" role="navigation">
+                    <a href="#community" class="icon-comments-alt">Community</a>
+                    <a href="https://github.com/aralejs" class="icon-github">Github</a>
+                    <a href="#about" class="icon-group">About</a>
                 </nav>
             </div>
         </header>
-        <div id="main">
-            <div class="container">
-                <article>
-                    <p>Arale 是一个开放、简单、易用的前端基础类库。</p>
-                </article>
-                <div id="slide" class="clearfix">
-                    <section id="infrastructure">
-                        <h3>Infrastructure</h3>
-                        <p>底层基础</p>
-                        <ul>
-                            <li><a href="http://seajs.org/docs/">seajs</a></li>
-                            <li><a href="/events/">events</a></li>
-                            <li><a href="/class/">class</a></li>
-                            <li><a href="/base/">base</a></li>
-                            <li><a href="/widget/">widget</a></li>
-                        </ul>
-                    </section>
-                    <section id="utilities">
-                        <h3>Utilities</h3>
-                        <ul>
-                            <li><a href="#">jquery</a></li>
-                            <li><a href="#">zepto</a></li>
-                            <li><a href="/cookie/">cookie</a></li>
-                            <li><a href="/easing/">easing</a></li>
-                            <li><a href="#">json</a></li>
-                            <li><a href="#">underscore</a></li>
-                            <li><a href="#">handlebars</a></li>
-                            <li><a href="#">jasmine</a></li>
-                            <li><a href="#">moment</a></li>
-                            <li><a href="/iframe-shim/">iframe-shim</a></li>
-                            <li><a href="#">swfobject</a></li>
-                            <li><a href="#">backbone</a></li>
-                            <li><a href="/position/">position</a></li>
-                            <li><a href="#">placeholder</a></li>
-                            <li><a href="#">store</a></li>
-                            <li><a href="#">async</a></li>
-                        </ul>
-                    </section>
-                    <section id="widgets">
-                        <h3>Widgets</h3>
-                        <ul>
-                            <li><a href="/overlay/">overlay</a></li>
-                            <li><a href="/dialog/">dialog</a></li>
-                            <li><a href="/switchable/">switchable</a></li>
-                            <li><a href="/popup/">popup</a></li>
-                            <li><a href="#">validator</a></li>
-                            <li><a href="/calendar/">calendar</a></li>
-                            <li><a href="/select/">select</a></li>
-                        </ul>
-                    </section>
+        <div id="banner">
+            <img src="./assets/img/banner.png" alt="banner" />
+        </div>
+        <div id="category">
+            <div class="container fn-clear">
+                <div class="tab tab-infrastructure">
+                    <h3><a href="#infrastructure">Infrastructure</a></h3>
+                    <p>Infrastructure is ....</p>
                 </div>
-                <div class="wrapper clearfix">
-                    <div id="github-issues">
-                        <h3>GitHub Issues</h3>
-                        <ul id="issues">
-                            <li>Loading ...</li>
-                        </ul>
-                    </div>
-                    <div id="sidebar">
-                        <h3>Contacts</h3>
-                        <ul>
-                            <li><a href="https://groups.google.com/forum/#!forum/aralejs">邮件列表</a></li>
-                            <li>阿里旺旺群：66486486（加入密码：aralejs.org）</li>
-                            <li>QQ 群：59443088</li>
-                        </ul>
-                        <h3>Who we are</h3>
-                        <div class="avatar">
-                            <a href="https://github.com/lifesinger" title="lifesinger"><img src="https://secure.gravatar.com/avatar/db33090541526c03c798f82aa0a5dbaa" /></a>
-                            <a href="http://lepture.com" title="lepture"><img src="https://secure.gravatar.com/avatar/83a5c46f52b4835e6048159bfa85478e" /></a>
-                            <a href="http://chuo.me" title="popomore"><img src="https://secure.gravatar.com/avatar/7c2e0a1d73398a5508f6cdfe9289a7f6" /></a>
-                            <a href="http://shaoshuai.me" title="shaoshuai0102"><img src="https://secure.gravatar.com/avatar/fce37096b1ef9d45bc431fb590dc37a8" /></a>
-                            <a href="http://pianyou.me" title="afc163"><img src="https://secure.gravatar.com/avatar/189fa3edcccee380b56444dc4f845927" /></a>
-                            <a href="http://www.vingel.com" title="vingel"><img src="https://secure.gravatar.com/avatar/928608361e8301f6b58f0345020225cf" /></a>
-                        </div>
-                    </div>
+                <div class="tab tab-utilities">
+                    <h3><a href="#utilities">Utilities</a></h3>
+                    <p>Utilities are ....</p>
+                </div>
+                <div class="tab tab-widgets">
+                    <h3><a href="#widgets">Widgets</a></h3>
+                    <p>Widgets are ....</p>
                 </div>
             </div>
         </div>
-        <footer id="footer">
+        <section id="module-list">
             <div class="container">
-                <div class="links">
-                    <p class="copyright">&copy; 2012 Alipay.com. All rights reserved.</p>
+                <div id="infrastructure" class="modules">
+                    <h3>Infrastructure</h3>
+                    <ul>
+                        <li><a href="http://seajs.org/docs/">seajs</a></li>
+                        <li><a href="/events/">events</a></li>
+                        <li><a href="/class/">class</a></li>
+                        <li><a href="/base/">base</a></li>
+                        <li><a href="/widget/">widget</a></li>
+                    </ul>
                 </div>
-                <div class="logos">
+                <div id="utilities" class="modules">
+                    <h3>Utilities</h3>
+                    <ul>
+                        <li><a href="#">jquery</a></li>
+                        <li><a href="#">zepto</a></li>
+                        <li><a href="/cookie/">cookie</a></li>
+                        <li><a href="/easing/">easing</a></li>
+                        <li><a href="#">json</a></li>
+                        <li><a href="#">underscore</a></li>
+                        <li><a href="#">handlebars</a></li>
+                        <li><a href="#">jasmine</a></li>
+                        <li><a href="#">moment</a></li>
+                        <li><a href="/iframe-shim/">iframe-shim</a></li>
+                        <li><a href="#">swfobject</a></li>
+                        <li><a href="#">backbone</a></li>
+                        <li><a href="/position/">position</a></li>
+                        <li><a href="#">placeholder</a></li>
+                        <li><a href="#">store</a></li>
+                        <li><a href="#">async</a></li>
+                    </ul>
+                </div>
+                <div id="widgets" class="modules">
+                    <h3>Widgets</h3>
+                    <ul>
+                        <li><a href="/overlay/">overlay</a></li>
+                        <li><a href="/dialog/">dialog</a></li>
+                        <li><a href="/switchable/">switchable</a></li>
+                        <li><a href="/popup/">popup</a></li>
+                        <li><a href="#">validator</a></li>
+                        <li><a href="/calendar/">calendar</a></li>
+                        <li><a href="/select/">select</a></li>
+                    </ul>
                 </div>
             </div>
+        </section>
+        <div id="community">
+            <div class="container">
+                <h3>Contribute</h3>
+                <p>AraleJS is a collection of ...</p>
+
+                <h3>Contact</h3>
+                <ul>
+                    <li><a href="https://groups.google.com/forum/#!forum/aralejs">邮件列表</a></li>
+                    <li>阿里旺旺群：66486486（加入密码：aralejs.org）</li>
+                    <li>QQ 群：59443088</li>
+                </ul>
+
+                <h3 id="about">About us</h3>
+                <p>...</p>
+            </div>
+        </div>
+        <footer id="footer">
+            <p class="container">&copy; 2012 Alipay.com All rights reserved.</p>
         </footer>
         <script type="text/javascript">
-            seajs.use('./assets/github', function(github) {
-                github('alipay/arale').issues();
+            seajs.use('#jquery/1.7.2/jquery', function($) {
+                // navigation scroll
+                $('#nav a').click(function(e) {
+                    var href = $(this).attr('href');
+                    if (href.indexOf('#') === 0) {
+                        e.preventDefault();
+                        history.pushState && history.pushState(null, null, href);
+                        $('html, body').animate({scrollTop: $(href).offset().top}, 400);
+                    }
+                });
+
+                var $modules = $('.modules');
+                $modules.hide();
+                if (location.hash == '#utilities' || location.hash == '#widgets') {
+                    $(location.hash).show();
+                } else {
+                    $('#infrastructure').show();
+                }
+
+                $('.tab a').click(function(e) {
+                    e.preventDefault();
+                    switchTab($(this).attr('href'));
+                    history.pushState && history.pushState(null, null, this.href);
+                });
+
+                function switchTab(id) {
+                    var target = $(id);
+                    if (target.is(':visible')) {
+                        return;
+                    }
+                    $modules.slideUp('ease-in');
+                    target.slideDown('ease-out');
+                }
             });
         </script>
     </body>
