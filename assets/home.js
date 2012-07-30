@@ -6,7 +6,10 @@ define(['#jquery/1.7.2/jquery'], function(require, exports) {
         if (href.indexOf('#') === 0) {
             e.preventDefault();
             history.pushState && history.pushState(null, null, href);
-            $('html, body').animate({scrollTop: $(href).offset().top}, 400);
+            $('.highlight').removeClass('highlight');
+            $('html, body').animate({
+                scrollTop: $(href).addClass('highlight').offset().top
+            }, 400);
         }
     });
 
@@ -16,6 +19,9 @@ define(['#jquery/1.7.2/jquery'], function(require, exports) {
         $(location.hash).show();
     } else {
         $('#infrastructure').show();
+        if (location.hash && location.hash != '#infrastructure') {
+            $(location.hash).addClass('highlight');
+        }
     }
 
     $('.tab a').click(function(e) {

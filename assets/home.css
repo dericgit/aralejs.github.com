@@ -136,10 +136,18 @@
 #widgets a {
     background-color: #01ACE2;
 }
-#community {
+#content {
     overflow: hidden;
     font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", Arial, sans-serif;
     background-color: #f6f9f8;
+    padding-bottom: 30px;
+}
+
+.label-icon:before {
+    margin-right: 3px;
+}
+.highlight {
+    color: #01ACE2;
 }
 #footer {
     padding: 10px 0;
