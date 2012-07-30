@@ -7,7 +7,6 @@
         <link rel="stylesheet" href="./assets/base.css" />
         <link rel="stylesheet" href="./assets/home.css" />
         <link rel="stylesheet" href="./assets/fontawesome/css/font-awesome.css" />
-        <script type="text/javascript" src="https://a.alipayobjects.com/static/arale/seajs/1.2.0/sea.js"></script>
         <!--[if lt IE 9]>
         <script type="text/javascript" src="./assets/html5shiv.js"></script>
         <![endif]-->
@@ -53,15 +52,15 @@
                 <div id="utilities" class="modules">
                     <p>工具组件的特点是，它们是锤子、斧头，其他组件只是通过纯组合的方式使用它们。工具组件里，大部分将直接来自社区已有的成熟组件。</p>
                     <ul>
-                        <li><a href="#">jquery</a></li>
-                        <li><a href="#">zepto</a></li>
+                        <li><a href="http://jquery.com">jquery</a></li>
+                        <li><a href="http://zeptojs.com/">zepto</a></li>
                         <li><a href="/cookie/">cookie</a></li>
                         <li><a href="/easing/">easing</a></li>
                         <li><a href="#">json</a></li>
-                        <li><a href="#">underscore</a></li>
-                        <li><a href="#">handlebars</a></li>
+                        <li><a href="http://underscorejs.org/">underscore</a></li>
+                        <li><a href="http://handlebarsjs.com/">handlebars</a></li>
                         <li><a href="#">jasmine</a></li>
-                        <li><a href="#">moment</a></li>
+                        <li><a href="http://momentjs.com/">moment</a></li>
                         <li><a href="/iframe-shim/">iframe-shim</a></li>
                         <li><a href="#">swfobject</a></li>
                         <li><a href="#">backbone</a></li>
@@ -78,7 +77,7 @@
                         <li><a href="/dialog/">dialog</a></li>
                         <li><a href="/switchable/">switchable</a></li>
                         <li><a href="/popup/">popup</a></li>
-                        <li><a href="#">validator</a></li>
+                        <li><a href="/validator/">validator</a></li>
                         <li><a href="/calendar/">calendar</a></li>
                         <li><a href="/select/">select</a></li>
                     </ul>
@@ -88,7 +87,7 @@
         <div id="community">
             <div class="container">
                 <h3>参与开发</h3>
-                <p>AraleJS is a collection of ...</p>
+                <p>AraleJS 是一套 CMD 模块精选集。</p>
 
                 <h3>联系我们</h3>
                 <ul>
@@ -104,41 +103,6 @@
         <footer id="footer">
             <p class="container">&copy; 2012 aralejs.org All rights reserved. Design inspired by <a href="http://www.insided.nl/">INSIDED</a>.</p>
         </footer>
-        <script type="text/javascript">
-            seajs.use('#jquery/1.7.2/jquery', function($) {
-                // navigation scroll
-                $('#nav a').click(function(e) {
-                    var href = $(this).attr('href');
-                    if (href.indexOf('#') === 0) {
-                        e.preventDefault();
-                        history.pushState && history.pushState(null, null, href);
-                        $('html, body').animate({scrollTop: $(href).offset().top}, 400);
-                    }
-                });
-
-                var $modules = $('.modules');
-                $modules.hide();
-                if (location.hash == '#utilities' || location.hash == '#widgets') {
-                    $(location.hash).show();
-                } else {
-                    $('#infrastructure').show();
-                }
-
-                $('.tab a').click(function(e) {
-                    e.preventDefault();
-                    switchTab($(this).attr('href'));
-                    history.pushState && history.pushState(null, null, this.href);
-                });
-
-                function switchTab(id) {
-                    var target = $(id);
-                    if (target.is(':visible')) {
-                        return;
-                    }
-                    $modules.slideUp('ease-in');
-                    target.slideDown('ease-out');
-                }
-            });
-        </script>
+        <script type="text/javascript" src="https://a.alipayobjects.com/static/arale/seajs/1.2.0/sea.js" data-main="./assets/home"></script>
     </body>
 </html>
