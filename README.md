@@ -1,4 +1,1 @@
-aralejs.github.com
-==================
-
-arale homepage
+http://aralejs.org/
