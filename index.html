@@ -2,118 +2,112 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
         <title>Arale</title>
+        <link rel="stylesheet" href="./assets/base.css" />
         <link rel="stylesheet" href="./assets/home.css" />
+        <link rel="stylesheet" href="./assets/fontawesome/css/font-awesome.css" />
         <!--[if lt IE 9]>
         <script type="text/javascript" src="./assets/html5shiv.js"></script>
         <![endif]-->
-
-        <script type="text/javascript" src="http://seajs.org/dist/sea.js"></script>
     </head>
     <body>
         <header id="header">
-            <div class="container">
-                <hgroup>
-                <h1>Arale</h1>
-                </hgroup>
-                <nav id="nav" role="navigation" class="clearfix">
-                    <a class="github" href="https://github.com/alipay/arale">GitHub</a>
-                    <a href="">关于</a>
-                    <a href="">关于</a>
+            <div class="container fn-clear">
+                <a id="logo" href="/" title="Home" class="icon-home">首页</a>
+                <nav id="nav" role="navigation">
+                    <a href="#github" class="icon-github">源码</a>
+                    <a href="#contact" class="icon-comments-alt">社区</a>
+                    <a href="#about" class="icon-group">关于</a>
                 </nav>
             </div>
         </header>
-        <div id="main">
+        <div id="banner" class="fn-clear">
+            <p><span class="arale">Arale</span> <br />是一个开放、简单、易用的前端基础类库。</p>
+            <img src="./assets/img/banner.jpg" alt="banner" />
+        </div>
+        <div id="module-list">
             <div class="container">
-                <article>
-                    <p>Arale 是一个开放、简单、易用的前端基础类库。</p>
-                </article>
-                <div id="slide" class="clearfix">
-                    <section id="infrastructure">
-                        <h3>Infrastructure</h3>
-                        <p>底层基础</p>
-                        <ul>
-                            <li><a href="http://seajs.org/docs/">seajs</a></li>
-                            <li><a href="/events/">events</a></li>
-                            <li><a href="/class/">class</a></li>
-                            <li><a href="/base/">base</a></li>
-                            <li><a href="/widget/">widget</a></li>
-                        </ul>
-                    </section>
-                    <section id="utilities">
-                        <h3>Utilities</h3>
-                        <ul>
-                            <li><a href="#">jquery</a></li>
-                            <li><a href="#">zepto</a></li>
-                            <li><a href="/cookie/">cookie</a></li>
-                            <li><a href="/easing/">easing</a></li>
-                            <li><a href="#">json</a></li>
-                            <li><a href="#">underscore</a></li>
-                            <li><a href="#">handlebars</a></li>
-                            <li><a href="#">jasmine</a></li>
-                            <li><a href="#">moment</a></li>
-                            <li><a href="/iframe-shim/">iframe-shim</a></li>
-                            <li><a href="#">swfobject</a></li>
-                            <li><a href="#">backbone</a></li>
-                            <li><a href="/position/">position</a></li>
-                            <li><a href="#">placeholder</a></li>
-                            <li><a href="#">store</a></li>
-                            <li><a href="#">async</a></li>
-                        </ul>
-                    </section>
-                    <section id="widgets">
-                        <h3>Widgets</h3>
-                        <ul>
-                            <li><a href="/overlay/">overlay</a></li>
-                            <li><a href="/dialog/">dialog</a></li>
-                            <li><a href="/switchable/">switchable</a></li>
-                            <li><a href="/popup/">popup</a></li>
-                            <li><a href="#">validator</a></li>
-                            <li><a href="/calendar/">calendar</a></li>
-                            <li><a href="/select/">select</a></li>
-                        </ul>
-                    </section>
+                <div id="category" class="fn-clear">
+                    <h3 class="tab tab-infrastructure">
+                        <a href="#infrastructure">基础</a>
+                    </h3>
+                    <h3 class="tab tab-utilities">
+                        <a href="#utilities">工具</a>
+                    </h3>
+                    <h3 class="tab tab-widgets">
+                        <a href="#widgets">组件</a>
+                    </h3>
                 </div>
-                <div class="wrapper clearfix">
-                    <div id="github-issues">
-                        <h3>GitHub Issues</h3>
-                        <ul id="issues">
-                            <li>Loading ...</li>
-                        </ul>
-                    </div>
-                    <div id="sidebar">
-                        <h3>Contacts</h3>
-                        <ul>
-                            <li><a href="https://groups.google.com/forum/#!forum/aralejs">邮件列表</a></li>
-                            <li>阿里旺旺群：66486486（加入密码：aralejs.org）</li>
-                            <li>QQ 群：59443088</li>
-                        </ul>
-                        <h3>Who we are</h3>
-                        <div class="avatar">
-                            <a href="https://github.com/lifesinger" title="lifesinger"><img src="https://secure.gravatar.com/avatar/db33090541526c03c798f82aa0a5dbaa" /></a>
-                            <a href="http://lepture.com" title="lepture"><img src="https://secure.gravatar.com/avatar/83a5c46f52b4835e6048159bfa85478e" /></a>
-                            <a href="http://chuo.me" title="popomore"><img src="https://secure.gravatar.com/avatar/7c2e0a1d73398a5508f6cdfe9289a7f6" /></a>
-                            <a href="http://shaoshuai.me" title="shaoshuai0102"><img src="https://secure.gravatar.com/avatar/fce37096b1ef9d45bc431fb590dc37a8" /></a>
-                            <a href="http://pianyou.me" title="afc163"><img src="https://secure.gravatar.com/avatar/189fa3edcccee380b56444dc4f845927" /></a>
-                            <a href="http://www.vingel.com" title="vingel"><img src="https://secure.gravatar.com/avatar/928608361e8301f6b58f0345020225cf" /></a>
-                        </div>
-                    </div>
+                <div id="infrastructure" class="modules">
+                    <p>这是整个类库的基础，能从底层让代码的书写规范、组件的构建方式、模块的调用方式等保持整体一致性。</p>
+                    <ul>
+                        <li><a href="http://seajs.org/docs/">seajs</a></li>
+                        <li><a href="/events/">events</a></li>
+                        <li><a href="/class/">class</a></li>
+                        <li><a href="/base/">base</a></li>
+                        <li><a href="/widget/">widget</a></li>
+                    </ul>
+                </div>
+                <div id="utilities" class="modules">
+                    <p>工具组件的特点是，它们是锤子、斧头，其他组件只是通过纯组合的方式使用它们。工具组件里，大部分将直接来自社区已有的成熟组件。</p>
+                    <ul>
+                        <li><a href="http://jquery.com">jquery</a></li>
+                        <li><a href="http://zeptojs.com/">zepto</a></li>
+                        <li><a href="/cookie/">cookie</a></li>
+                        <li><a href="/easing/">easing</a></li>
+                        <li><a href="#">json</a></li>
+                        <li><a href="http://underscorejs.org/">underscore</a></li>
+                        <li><a href="http://handlebarsjs.com/">handlebars</a></li>
+                        <li><a href="#">jasmine</a></li>
+                        <li><a href="http://momentjs.com/">moment</a></li>
+                        <li><a href="/iframe-shim/">iframe-shim</a></li>
+                        <li><a href="#">swfobject</a></li>
+                        <li><a href="#">backbone</a></li>
+                        <li><a href="/position/">position</a></li>
+                        <li><a href="#">placeholder</a></li>
+                        <li><a href="#">store</a></li>
+                        <li><a href="#">async</a></li>
+                    </ul>
+                </div>
+                <div id="widgets" class="modules">
+                    <p>目前 jQuery 社区和 CommonJS 等社区尚未有很好用很成熟的 UI 解决方案，因此 UI 类组件大部分将自主研发。这将会是 Arale 类库的核心亮点之一。</p>
+                    <ul>
+                        <li><a href="/overlay/">overlay</a></li>
+                        <li><a href="/dialog/">dialog</a></li>
+                        <li><a href="/switchable/">switchable</a></li>
+                        <li><a href="/popup/">popup</a></li>
+                        <li><a href="/validator/">validator</a></li>
+                        <li><a href="/calendar/">calendar</a></li>
+                        <li><a href="/select/">select</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-        <footer id="footer">
+        <div id="content">
             <div class="container">
-                <div class="links">
-                    <p class="copyright">&copy; 2012 Alipay.com. All rights reserved.</p>
-                </div>
-                <div class="logos">
-                </div>
+                <h3 id="github">参与开发</h3>
+                <p><a class="label-icon icon-github" href="https://github.com/aralejs">AraleJS</a> 是一套 CMD 模块精选集。</p>
+
+                <h3 id="contact">联系我们</h3>
+                <ul>
+                    <li><a href="https://groups.google.com/forum/#!forum/aralejs">邮件列表</a></li>
+                    <li>阿里旺旺群：66486486（加入密码：aralejs.org）</li>
+                    <li>QQ 群：59443088</li>
+                </ul>
+
+                <h3 id="about">关于我们</h3>
+                <p>...</p>
+
+                <h3>常用链接</h3>
+                <ul>
+                    <li><a href="http://seajs.org">SeaJS: A Module Loader for the Web</li>
+                </ul>
             </div>
+        </div>
+        <footer id="footer">
+            <p class="container">&copy; 2012 aralejs.org All rights reserved. Design inspired by <a href="http://www.insided.nl/">INSIDED</a>.</p>
         </footer>
-        <script type="text/javascript">
-            seajs.use('./assets/github', function(github) {
-                github('alipay/arale').issues();
-            });
-        </script>
+        <script type="text/javascript" src="https://a.alipayobjects.com/static/arale/seajs/1.2.0/sea.js" data-main="./assets/home"></script>
     </body>
 </html>
