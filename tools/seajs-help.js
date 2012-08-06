@@ -37,6 +37,7 @@ if (location.search.indexOf('github') == -1) {
     base: githubBase,
     alias: {
       '$': 'jquery/1.7.2/jquery',
+      '$-debug': 'jquery/1.7.2/jquery-debug',
       'jquery': 'jquery/1.7.2/jquery',
       'zepto': 'zepto/0.9.0/zepto',
       'json': 'json/1.0.2/json',
