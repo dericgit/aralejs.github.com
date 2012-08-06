@@ -1,8 +1,3 @@
-if (location.search.indexOf('github') == -1) {
-  document.write('<script src="https://a.alipayobjects.com/static/arale/seajs/1.2.0/sea.js"><\/script>');
-} else {
-  document.write('<script src="http://seajs.org/dist/sea.js"><\/script>');
-}
 ;(function() {
   var reserved = [
     'jquery', 'zepto', 'json', 'jasmine', 'underscore', 'handlebars',
