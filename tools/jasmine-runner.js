@@ -1,67 +1,45 @@
-(function() {
+seajs.use(['../package.json', 'jasmine/1.1.0/jasmine-html'], function(meta) {
 
-    var HAS_PACKAGE = !this.NO_PACKAGE;
+  var jasmineEnv = getJasmineEnv()
 
-    var modules = ['jasmine'];
-    HAS_PACKAGE && modules.unshift('text!../package.json');
+  // 让 Jasmine 从文艺青年变成普通青年
+  this.test = it
+  this.xtest = xit
 
-    // no cache
-    seajs.config({
-        debug: 1
-    });
-
-
-    seajs.use(modules, function(data) {
-        seajs.config({
-            alias: data.seaDependencies
-        });
-
-        var jasmineEnv = getJasmineEnv();
-
-        // Make alias
-        this.test = it;
-        this.xtest = xit;
-
-        // Go
-        runSpecs();
+  // Go
+  runSpecs()
 
 
-        function getJasmineEnv() {
-            var env = jasmine.getEnv();
-            env.updateInterval = 1000;
+  function getJasmineEnv() {
+    var env = jasmine.getEnv()
+    env.updateInterval = 1000
 
-            var trivialReporter = new jasmine.TrivialReporter();
+    var trivialReporter = new jasmine.TrivialReporter()
+    env.addReporter(trivialReporter)
 
-            env.addReporter(trivialReporter);
-
-            env.specFilter = function(spec) {
-                return trivialReporter.specFilter(spec);
-            };
-
-            return env;
-        }
+    env.specFilter = function(spec) {
+      return trivialReporter.specFilter(spec)
+    }
+    return env
+  }
 
 
-        function runSpecs() {
-            var meta = HAS_PACKAGE ? data : {};
-            var tests = meta['tests'] || [];
+  function runSpecs() {
+    var tests = meta['tests'] || []
 
-            // Get the default test from path: path/to/xxx/tests/runner.html
-            if (tests.length === 0) {
-                tests.push(location.href
-                        .replace(/.+\/([\w-]+)\/tests\/runner.+/, '$1'));
-            }
+    // Get the default test from path: path/to/xxx/tests/runner.html
+    if (tests.length === 0) {
+      tests.push(location.href.replace(/.+\/([\w-]+)\/tests\/runner.+/, '$1'))
+    }
 
-            var specs = [];
-            for (var i = 0; i < tests.length; i++) {
-                specs[i] = './' + tests[i] + '-spec.js';
-            }
+    var specs = []
+    for (var i = 0; i < tests.length; i++) {
+      specs[i] = './' + tests[i] + '-spec.js'
+    }
 
-            seajs.use(specs, function() {
-                jasmineEnv.execute();
-            });
-        }
+    seajs.use(specs, function() {
+      jasmineEnv.execute()
+    })
+  }
 
-    });
-
-})();
+})
