@@ -52,7 +52,7 @@
   var _use = seajs.use
 
   var packagePath = '../package.json'
-  if (location.href.indexOf('/dist/docs/') > 0) {
+  if (location.href.indexOf('/dist/') > 0) {
     packagePath = '../' + packagePath
   }
 
