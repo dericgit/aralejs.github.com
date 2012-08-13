@@ -43,7 +43,8 @@
     },
     map: mapRules,
     preload: [
-      'seajs/plugin-json'
+      'seajs/plugin-json',
+      'seajs/plugin-text'
     ]
   })
 
