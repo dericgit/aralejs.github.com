@@ -1,7 +1,21 @@
+h3 {
+    font-size:18px;
+    font-weight:500;
+    margin:30px 0 10px;
+}
+p {
+    margin:15px 0;
+}
+ul {
+    list-style: square outside none;
+    padding-left:30px;
+    margin:15px 0;
+}
 .container {
     max-width: 980px;
     margin: 0 auto;
     padding: 0 20px;
+    font-size:14px;
 }
 @media (max-width: 560px) {
     .container {
@@ -126,15 +140,29 @@
 }
 #module-list a:hover {
     opacity: 0.8;
+    text-decoration:none;
 }
+.tab a {
+    color:#333;
+}
+
 #infrastructure a {
     background-color: #89C237;
+}
+.tab-infrastructure a:hover {
+    color: #89C237;
 }
 #utilities a {
     background-color: #F53379;
 }
+.tab-utilities a:hover {
+    color: #F53379;
+}
 #widgets a {
     background-color: #01ACE2;
+}
+.tab-widgets a:hover {
+    color: #01ACE2;
 }
 #content {
     overflow: hidden;
