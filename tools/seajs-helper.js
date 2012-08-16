@@ -38,8 +38,13 @@
     alias: {
       '$': 'jquery/1.7.2/jquery',
       '$-debug': 'jquery/1.7.2/jquery-debug',
+
       'jquery': 'jquery/1.7.2/jquery',
-      'jquery-debug': 'jquery/1.7.2/jquery-debug'
+      'jquery-debug': 'jquery/1.7.2/jquery-debug',
+
+      'zepto': 'zepto/0.9.0/zepto',
+      'zepto-debug': 'zepto/0.9.0/zepto-debug'
+
     },
     map: mapRules,
     preload: [
