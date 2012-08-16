@@ -251,3 +251,12 @@
     border: none;
     background: transparent;
 }
+
+hr.end {
+  display: block;
+  margin: 85px 0 125px;
+  height: 10px;
+  border: none;
+  clear: both;
+  background: url(img/end.png) no-repeat 50% 50%;
+}
