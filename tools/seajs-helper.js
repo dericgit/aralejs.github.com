@@ -42,8 +42,7 @@
       'jquery': 'jquery/1.7.2/jquery',
       'jquery-debug': 'jquery/1.7.2/jquery-debug',
 
-      'zepto': 'zepto/0.9.0/zepto',
-      'zepto-debug': 'zepto/0.9.0/zepto-debug'
+      'zepto': 'https://a.alipayobjects.com/static/handy/zepto/0.9.0/zepto.js'
 
     },
     map: mapRules,
@@ -57,13 +56,8 @@
   var aliasIsParsed = false
   var _use = seajs.use
 
-  var packagePath = '../package.json'
-  if (location.href.indexOf('/dist/') > 0) {
-    packagePath = '../' + packagePath
-  }
-
   seajs.use = function(ids, callback) {
-    _use(packagePath, function(data) {
+    _use('../package.json', function(data) {
 
       if (aliasIsParsed === false) {
         // 有可能存在 { '$': '$' } 配置，需排除掉
