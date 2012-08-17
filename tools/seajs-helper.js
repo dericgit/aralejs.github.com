@@ -19,7 +19,7 @@
     }
 
     // 将 "/master/xxx.js" 转换成 "/master/src/xxx.js"
-    url = url.replace(/\/master\/([^\/]+\.js)$/, '/master/src/$1')
+    url = url.replace(/\/master\/([^\/]+\.js)$/, '/master/dist/$1')
 
     // 将 "/1.0.2/xxx.js" 转换成 "/1.0.2/dist/xxx.js"
     url = url.replace(/\/([\d.]+)\/([^\/]+\.js)$/, '/$1/dist/$2')
