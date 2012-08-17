@@ -244,6 +244,9 @@
     padding: 6px 10px;
     border-radius: 3px;
 }
+.markdown-body pre, .markdown-body code {
+    font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
 .markdown-body pre > code {
     margin: 0;
     padding: 0;
@@ -257,10 +260,10 @@
 }
 
 hr.end {
-  display: block;
-  margin: 40px 0;
-  height: 10px;
-  border: none;
-  clear: both;
-  background: url(img/end.png) no-repeat 50% 50%;
+    display: block;
+    margin: 40px 0;
+    height: 10px;
+    border: none;
+    clear: both;
+    background: url(img/end.png) no-repeat 50% 50%;
 }
