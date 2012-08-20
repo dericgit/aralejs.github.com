@@ -26,7 +26,7 @@
 
     // 如果访问 alipay.im 则从 git.alipay.im 加载
     if (location.hostname.indexOf('alipay.im') > 0) {
-      // http://git.alipay.im/overlay/0.9.9/dist/overlay.js
+      // 链接转换成 http://git.alipay.im/overlay/0.9.9/dist/overlay.js
       url = url.replace(GITHUB_BASE, 'http://git.alipay.im/')
 
       // http://git.alipay.im/overlay/0.9.9/blob?path=dist/overlay.js
