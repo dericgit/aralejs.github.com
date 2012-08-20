@@ -18,11 +18,20 @@
       }
     }
 
-    // 将 "/master/xxx.js" 转换成 "/master/src/xxx.js"
+    // 将 "/master/xxx.js" 转换成 "/master/dist/xxx.js"
     url = url.replace(/\/master\/([^\/]+\.js)$/, '/master/dist/$1')
 
     // 将 "/1.0.2/xxx.js" 转换成 "/1.0.2/dist/xxx.js"
     url = url.replace(/\/([\d.]+)\/([^\/]+\.js)$/, '/$1/dist/$2')
+
+    // 如果访问 alipay.im 则从 git.alipay.im 加载
+    if (location.hostname.indexOf('alipay.im') > 0) {
+      // http://git.alipay.im/overlay/0.9.9/dist/overlay.js
+      url = url.replace(GITHUB_BASE, 'http://git.alipay.im/')
+
+      // http://git.alipay.im/overlay/0.9.9/blob?path=dist/overlay.js
+      url = url.replace('dist', 'blob?path=dist')
+    }
 
     // 本地开发中的文件，直接从本地加载
     if (url.indexOf('src') < 0 && url.indexOf('dist') < 0) {
