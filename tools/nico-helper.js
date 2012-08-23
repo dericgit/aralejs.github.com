@@ -23,7 +23,7 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
         $.get('/info.json', function(data) {
             console.log(data);
             $(['arale', 'alipay', 'alice']).each(function(i, item) {
-                var html = '<div class="document-setion fn-clear">',
+                var html = '<div class="document-section fn-clear">',
                     projects = data[item];
                 for(var i=0; i<projects.length; i++) {
                     var name = (item === 'arale') ? projects[i].name : item + '.' + projects[i].name;
