@@ -80,7 +80,7 @@
     display: inline;
     margin-right: 20px;
     padding: 10px 20px;
-    width: 70%;
+    width: 72%;
 	color:#494949!important;
     overflow:hidden;
 }
@@ -184,7 +184,6 @@ hr.end {
 	float: left;
     display: inline;    
 	width: 20%;
-    padding-left:15px;
 }
 .document-section h2 {
 	color:#666;
