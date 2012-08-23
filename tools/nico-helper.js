@@ -5,7 +5,9 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
 
         // 更改源码的对应地址
         var code = $('#code-link');
-        code && code.attr('href', code.attr('href').replace('https://github.com/aralejs', GitlabBaseUrl));
+        if (code) {
+            code.attr('href', code.attr('href').replace('https://github.com/aralejs', GitlabBaseUrl));
+        }
 
         // 将用例的链接设为新窗口打开，主页设为本窗口打开
         $('#nav-test').attr('target', '_blank');
