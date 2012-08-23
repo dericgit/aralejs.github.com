@@ -34,7 +34,7 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
                 }
                 for(var i=0; i<projects.length; i++) {
                     var name = (item === 'arale') ? projects[i].name : item + '.' + projects[i].name;
-                    html += '<li class="' + item + '"><a href="' + location.hostname + '/' + name + '">';
+                    html += '<li class="' + item + '"><a href="http://' + location.hostname + '/' + name + '">';
                     html += projects[i].name;
                     html += '</a></li>';
                 }
