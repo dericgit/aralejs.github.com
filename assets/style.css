@@ -175,7 +175,7 @@
     float: left;
     display: inline;
     margin-right: 20px;
-    margin-top: 22px;
+    margin-top: 20px;
     padding: 10px 20px;
     width: 100%;
     margin-right:-280px;
@@ -278,7 +278,9 @@ hr.end {
 
 .document-index {
 	float: left;
-	width: 260px;
+	width: 20%;
+    padding-left:15px;
+    margin-top:20px;
 }
 .document-section h2 {
 	color:#666;
