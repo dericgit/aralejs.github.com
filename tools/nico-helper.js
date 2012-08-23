@@ -1,4 +1,4 @@
-seajs.use('$', function() {
+seajs.use('jquery', function($) {
     if (location.hostname.indexOf('.im') > 0) {
         // 更改源码的对应地址
         var code = $('#code-link');
