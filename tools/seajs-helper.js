@@ -24,18 +24,18 @@
     // 将 "/1.0.2/xxx.js" 转换成 "/1.0.2/dist/xxx.js"
     url = url.replace(/\/([\d.]+)\/([^\/]+\.js)$/, '/$1/dist/$2')
 
+    // 本地开发中的文件，直接从本地加载
+    if (url.indexOf('src') < 0 && url.indexOf('dist') < 0) {
+      url = url.replace(GITHUB_BASE, '../src/')
+    }
+
     // 如果访问 alipay.im 则从 git.alipay.im 加载
-    if (location.hostname.indexOf('alipay.im') > 0) {
+    if (location.hostname.indexOf('alipay.im') != -1 && url.indexOf(GITHUB_BASE) != -1) {
       // 链接转换成 http://git.alipay.im/overlay/0.9.9/dist/overlay.js
       url = url.replace(GITHUB_BASE, 'http://git.alipay.im/')
 
       // http://git.alipay.im/overlay/0.9.9/blob?path=dist/overlay.js
       url = url.replace('dist', 'blob?path=dist')
-    }
-
-    // 本地开发中的文件，直接从本地加载
-    if (url.indexOf('src') < 0 && url.indexOf('dist') < 0) {
-        url = url.replace(GITHUB_BASE, '../src/')
     }
 
     return url
