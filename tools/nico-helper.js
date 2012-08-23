@@ -47,6 +47,10 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
             $('.document-index li a').each(function(i, item) {
                 $(item).parent()[ ($(item).html().indexOf(str) !== -1) ? 'show' : 'hide' ]();
             }); 
+        }).on('keypress', function(e) {
+            if (e.keyCode === 13) {
+                location.href = $('.document-index li:visible a')[0].attr('href');
+            }
         });
     }
 });
