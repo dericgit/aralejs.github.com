@@ -46,7 +46,7 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
             var str = $(this).val();
             $('.document-index li a').each(function(i, item) {
                 item = $(item);
-                item[ item.html().indexOf(str) !== -1) ? 'show' : 'hide' ]();    
+                item[ (item.html().indexOf(str) !== -1) ? 'show' : 'hide' ]();
             }); 
         });
     }
