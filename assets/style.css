@@ -186,6 +186,11 @@ hr.end {
     display: inline;    
 	width: 20%;
 }
+.document-index input {
+    width: 60%;
+    margin-bottom: 10px;
+    height: 20px;
+}
 .document-section h2 {
 	color:#666;
 	font-size: 18px;
