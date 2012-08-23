@@ -13,6 +13,6 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
         });
 
         // 增加一个全局导航触发点
-        $('#nav').append($('<input type="text" id="search" />'))
+        $('#main .container').append($('<input type="text" id="search" />'))
     }
 });
