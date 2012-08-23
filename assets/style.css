@@ -171,14 +171,14 @@
 
 .markdown-body {
     font:14px/1.6 Helvetica, arial, freesans, clean, sans-serif;
-    background-color: #FBFBFB;
+    background-color: #FaFcfc;
     float: left;
     display: inline;
     margin-right: 20px;
     margin-top: 20px;
     padding: 10px 20px;
     width: 75%;
-	color:#555!important;    
+	color:#494949!important;    
 }
 .markdown-body h1, .markdown-body h2, .markdown-body h3, 
 .markdown-body h4, .markdown-body h5, .markdown-body h6 {
@@ -241,6 +241,7 @@
     border: 1px solid #EAEAEA;
     background-color: #FFF0D5;
     border-radius: 3px;
+    color:#666;
 }
 .markdown-body .highlight pre, .markdown-body pre {
     background-color: #F8F8F8;
@@ -277,6 +278,7 @@ hr.end {
 
 .document-index {
 	float: left;
+    display: inline;    
 	width: 20%;
     padding-left:15px;
     margin-top:20px;
