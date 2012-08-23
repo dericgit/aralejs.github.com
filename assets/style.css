@@ -7,8 +7,8 @@
     margin: 0 auto;
 }
 #header {
-    padding: 20px 0 22px;
-    background: #1a1a1a url(img/bg-line.jpg) repeat-x 0 100%;
+    padding: 20px 0;
+    background: #1b1b1b url(img/bg-line.jpg) repeat-x 0 100%;
     border-bottom: 1px solid #e6e9e8;
     font: 16px/1.5 "Helvetica Neue", arial, sans-serif;
     margin-bottom:25px;
@@ -34,6 +34,21 @@
 }
 #header a.current {
     color: #fff;
+}
+
+#logo {
+	display: inline-block;
+	font-size: 20px;
+    line-height:24px;
+}
+#logo:hover {
+	text-decoration: none;
+}
+#logo sup {
+	color:#888;
+}
+#logo:hover sup {
+	color:#F53379;
 }
 #nav {
     float: right;
