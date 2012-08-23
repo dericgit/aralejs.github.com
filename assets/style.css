@@ -85,7 +85,6 @@
     width: 72%;
 	color:#494949!important;
     overflow:hidden;
-    text-shadow:1px 1px #fff;
 }
 .markdown-body h1, .markdown-body h2, .markdown-body h3, 
 .markdown-body h4, .markdown-body h5, .markdown-body h6 {
@@ -140,6 +139,9 @@
 }
 .markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body table, .markdown-body pre {
     margin: 15px 0;
+}
+.markdown-body p {
+    text-shadow:1px 1px #fff;
 }
 .markdown-body code, .markdown-body tt {
     margin: 0 2px;
