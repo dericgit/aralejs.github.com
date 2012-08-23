@@ -36,17 +36,18 @@
     color: #fff;
 }
 
-#logo {
+#arale-logo {
 	display: inline-block;
-    line-height:24px;
+    line-height:12px;
+    font-size:18px;
 }
-#logo:hover {
+#arale-logo:hover {
 	text-decoration: none;
 }
-#logo sup {
+#arale-logo sup {
 	color:#888;
 }
-#logo:hover sup {
+#arale-logo:hover sup {
 	color:#F53379;
 }
 #nav {
