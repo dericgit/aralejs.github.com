@@ -7,8 +7,9 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
         var code = $('#code-link');
         code.attr('href', code.attr('href').replace('https://github.com/aralejs', GitlabBaseUrl));
 
-        // 将用例的链接设为新窗口打开
+        // 将用例的链接设为新窗口打开，主页设为本窗口打开
         $('#nav-test').attr('target', '_blank');
+        $('#logo').attr('target', '');
 
         // 去掉gitlab下的icon
         /*
