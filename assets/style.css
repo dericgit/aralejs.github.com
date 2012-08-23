@@ -39,22 +39,6 @@
     float: right;
 }
 
-#logo {
-	display: inline-block;
-	position: absolute;
-	top: 10px;
-	font-size: 22px;
-}
-#logo:hover {
-	text-decoration: none;
-}
-#logo sup {
-	color:#888;
-}
-#logo:hover sup {
-	color:#F53379;
-}
-
 #main {
     clear: both;
 }
