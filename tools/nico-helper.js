@@ -22,7 +22,7 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
 
         // 增加一个全局导航触发点
         $('#main .container').append($(
-            '<div class="document-index"><input placeholder="搜索组件" type="text" id="search" /></div>'));
+            '<div class="document-index"><input placeholder="搜索组件，回车到达" type="text" id="search" /></div>'));
 
         // 载入组件信息
         $.get('/info.json', function(data) {
