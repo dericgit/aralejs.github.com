@@ -49,7 +49,7 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
             }); 
         }).on('keypress', function(e) {
             if (e.keyCode === 13) {
-                location.href = $('.document-index li:visible a')[0].attr('href');
+                location.href = $('.document-index li:visible a')[0].getAttribute('href');
             }
         });
     }
