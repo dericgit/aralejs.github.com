@@ -51,6 +51,6 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
             if (e.keyCode === 13) {
                 location.href = 'http://' + location.hostname + '/' + $('.document-index li:visible a')[0].innerHTML;
             }
-        });
+        }).focus();
     }
 });
