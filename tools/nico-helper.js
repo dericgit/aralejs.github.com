@@ -23,15 +23,18 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
         $.get('/info.json', function(data) {
             console.log(data);
             $(['arale', 'alipay', 'alice']).each(function(i, item) {
-                var html = '<div class="document-section fn-clear">',
+                var html = '<ul class="document-section fn-clear">',
                     projects = data[item];
+                if(!projects.length) {
+                    html += '<li class="' + item + '"><a href="#">暂无</a></li>';
+                }
                 for(var i=0; i<projects.length; i++) {
                     var name = (item === 'arale') ? projects[i].name : item + '.' + projects[i].name;
                     html += '<li class="' + item + '"><a href="' + GitlabBaseUrl + '/' + name + '">';
                     html += projects[i].name;
                     html += '</a></li>';
                 }
-                html += '</div>';
+                html += '</ul>';
                 $('.document-index').append($(html));
             });
         }, 'json');
