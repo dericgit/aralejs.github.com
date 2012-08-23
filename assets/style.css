@@ -140,9 +140,6 @@
 .markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body table, .markdown-body pre {
     margin: 15px 0;
 }
-.markdown-body p {
-    text-shadow:1px 1px #fff;
-}
 .markdown-body code, .markdown-body tt {
     margin: 0 2px;
     padding: 0px 5px;
