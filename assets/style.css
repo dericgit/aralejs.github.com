@@ -190,6 +190,7 @@ hr.end {
 	color:#666;
 	font-size: 18px;
 	padding-bottom: 10px;
+    text-transform:capitalize;
 }
 .document-section {
 	margin-bottom:10px;

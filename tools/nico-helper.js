@@ -23,7 +23,7 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
         $.get('/info.json', function(data) {
             console.log(data);
             $(['arale', 'alipay', 'alice']).each(function(i, item) {
-                var html = '<ul class="document-section fn-clear">',
+                var html = '<h2>' + item + '</h2><ul class="document-section fn-clear">',
                     projects = data[item];
                 if(!projects.length) {
                     html += '<li class="' + item + '"><a href="#">暂无</a></li>';
