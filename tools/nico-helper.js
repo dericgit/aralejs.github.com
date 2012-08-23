@@ -6,5 +6,10 @@ seajs.use(['https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js'], f
 
         // 将用例的链接设为新窗口打开
         $('#nav-test').attr('target', '_blank');
+
+        // 去掉gitlab下的icon
+        $('#nav a').each(function(index, item) {
+            item.className = '';
+        });
     }
 });
