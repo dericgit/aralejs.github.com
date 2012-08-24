@@ -27,6 +27,15 @@ seajs.use('$', function($) {
         $('#main .container').append($(
             '<div class="document-index"><input placeholder="搜索组件，回车到达" type="text" id="search" /></div>'));
 
+        var updateBtn = $('<button id="update">更新文档</button>');
+        updateBtn.click(function() {
+            updateBtn.html('更新中...');
+            $.get('/-webhook', function() {
+                location.reload();
+            });
+        });
+        $('#main .container').append(updateBtn);
+
         // 载入组件信息
         $.get('/info.json', function(data) {
             $(['arale', 'alipay', 'alice']).each(function(i, item) {
@@ -42,7 +51,7 @@ seajs.use('$', function($) {
                     html += '</a></li>';
                 }
                 html += '</ul>';
-                $('.document-index').append($(html));
+                $('#search').after($(html));
             });
         }, 'json');
 
@@ -57,6 +66,7 @@ seajs.use('$', function($) {
                 location.href = 'http://' + location.hostname + '/' + $('.document-index li:visible a')[0].innerHTML;
             }
         }).focus();
+        
     }
 
 });
