@@ -31,7 +31,9 @@ seajs.use('$', function($) {
             '</div>'));
 
         $('#update').click(function() {
-            $(this).html('更新中...').attr('disabled', 'disabled');
+            $(this).html('更新中...')
+                   .attr('disabled', 'disabled')
+                   .css('background-color', '#999');
             $.get('/-webhook', function() {
                 location.reload();
             });
