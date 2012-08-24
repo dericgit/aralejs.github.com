@@ -61,27 +61,28 @@
     ]
   })
 
+  if (location.href.indexOf('examples') > 0 || location.href.indexOf('tests') > 0) {
+    var aliasIsParsed = false
+    var _use = seajs.use
 
-  var aliasIsParsed = false
-  var _use = seajs.use
+    seajs.use = function(ids, callback) {
+      _use('../package.json', function(data) {
 
-  seajs.use = function(ids, callback) {
-    _use('../package.json', function(data) {
+        if (aliasIsParsed === false) {
+          // 有可能存在 { '$': '$' } 配置，需排除掉
+          data.dependencies && (delete data.dependencies['$'])
+          data.devDependencies && (delete data.devDependencies['$'])
 
-      if (aliasIsParsed === false) {
-        // 有可能存在 { '$': '$' } 配置，需排除掉
-        data.dependencies && (delete data.dependencies['$'])
-        data.devDependencies && (delete data.devDependencies['$'])
+          seajs.config({ alias: data.dependencies })
+          seajs.config({ alias: data.devDependencies })
 
-        seajs.config({ alias: data.dependencies })
-        seajs.config({ alias: data.devDependencies })
+          aliasIsParsed = true
+          seajs.use = _use
+        }
 
-        aliasIsParsed = true
-        seajs.use = _use
-      }
-
-      _use(ids, callback)
-    })
+        _use(ids, callback)
+      })
+    }
   }
 
 })()
