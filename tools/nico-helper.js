@@ -31,7 +31,7 @@ seajs.use('$', function($) {
             '</div>'));
 
         $('#update').click(function() {
-            $(this).html('更新中...');
+            $(this).html('更新中...').attr('disabled', 'disabled');
             $.get('/-webhook', function() {
                 location.reload();
             });
