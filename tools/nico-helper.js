@@ -46,7 +46,7 @@ seajs.use('$', function($) {
                     html += '<li class="' + item + '"><a href="#">暂无</a></li>';
                 }
                 for(var i=0; i<projects.length; i++) {
-                    var name = (item === 'arale') ? projects[i].name : item + '.' + projects[i].name;
+                    var name = (item === 'arale') ? projects[i].name : item + '_' + projects[i].name;
                     html += '<li class="' + item + '"><a href="http://' + location.hostname + '/' + name + '">';
                     html += projects[i].name;
                     html += '</a></li>';
