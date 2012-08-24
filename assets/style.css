@@ -191,7 +191,7 @@ hr.end {
 }
 .document-index #update {
     width: 80px;
-    background-color:#666;
+    background-color:#777;
     color:#fff;
     border:none;
     margin-top: 10px;
@@ -229,3 +229,4 @@ li.alipay {
 li.alice {
     background-color: #89C237;
 }
+    background-color:#666;

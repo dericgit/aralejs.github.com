@@ -33,7 +33,7 @@ seajs.use('$', function($) {
         $('#update').click(function() {
             $(this).html('更新中...')
                    .attr('disabled', 'disabled')
-                   .css('background-color', '#999');
+                   .css('background-color', '#aaa');
             $.get('/-webhook', function() {
                 location.reload();
             });
