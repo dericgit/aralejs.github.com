@@ -1,6 +1,6 @@
 define(function(require) {
 
-    var $ = require('$');
+    var $ = require('https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js');
 
     if (location.hostname.indexOf('alipay.im') > 0) {
 
