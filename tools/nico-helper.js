@@ -13,6 +13,8 @@ seajs.use('$', function($) {
         // 将用例的链接设为新窗口打开，主页设为本窗口打开
         $('#nav-test').attr('target', '_blank');
         $('#logo').attr('target', '');
+        $('#code-link').attr('target', '_blank');
+        
 
         // 去掉gitlab下的icon
         /*
