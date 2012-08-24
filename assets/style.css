@@ -56,14 +56,14 @@
 
 #main {
     clear: both;
-    overflow:hidden;
 }
 
 .document-body {
     float: left;
     display: inline;
     width: 75%;
-    margin-right: 20px;    
+    margin-right: 20px;
+    overflow:hidden;
 }
 #side-nav {
     height: 30px;
