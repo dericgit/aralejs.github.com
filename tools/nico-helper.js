@@ -55,6 +55,8 @@ seajs.use('$', function($) {
                 }
                 html += '</ul>';
                 $('#update').before($(html));
+                //动画进入
+                $('.document-index').fadeIn(100);
             });
         }, 'json');
 

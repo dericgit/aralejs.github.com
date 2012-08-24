@@ -188,6 +188,7 @@ hr.end {
 	float: left;
     display: inline;    
 	width: 20%;
+    display:none;
 }
 .document-index #update {
     width: 80px;
