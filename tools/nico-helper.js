@@ -25,16 +25,17 @@ seajs.use('$', function($) {
 
         // 增加一个全局导航触发点
         $('#main .container').append($(
-            '<div class="document-index"><input placeholder="搜索组件，回车到达" type="text" id="search" /></div>'));
+            '<div class="document-index">' +
+            '<input placeholder="搜索组件，回车到达" type="text" id="search" />' +
+            '<button id="update">更新文档</button>' +
+            '</div>'));
 
-        var updateBtn = $('<button id="update">更新文档</button>');
-        updateBtn.click(function() {
-            updateBtn.html('更新中...');
+        $('#update').click(function() {
+            $(this).html('更新中...');
             $.get('/-webhook', function() {
                 location.reload();
             });
         });
-        $('#main .container').append(updateBtn);
 
         // 载入组件信息
         $.get('/info.json', function(data) {
