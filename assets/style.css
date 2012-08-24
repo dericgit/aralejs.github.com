@@ -189,7 +189,15 @@ hr.end {
     display: inline;    
 	width: 20%;
 }
-.document-index input {
+.document-index #update {
+    width: 80px;
+    background-color:#666;
+    color:#fff;
+    border:none;
+    margin-top: 10px;
+    height: 24px;
+}
+.document-index #search {
     width: 80%;
     margin-bottom: 10px;
     height: 24px;
