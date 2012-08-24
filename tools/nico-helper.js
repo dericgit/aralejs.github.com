@@ -51,7 +51,7 @@ seajs.use('$', function($) {
                     html += '</a></li>';
                 }
                 html += '</ul>';
-                $('#search').after($(html));
+                $('#update').before($(html));
             });
         }, 'json');
 
