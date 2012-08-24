@@ -1,4 +1,4 @@
-seajs.use('https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js', function($) {
+seajs.use('$', function($) {
     
     if (location.hostname.indexOf('alipay.im') > 0) {
 
