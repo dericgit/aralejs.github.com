@@ -1,7 +1,5 @@
-define(function(require) {
-
-    var $ = require('https://a.alipayobjects.com/static/arale/jquery/1.7.2/jquery.js');
-
+seajs.use('$', function($) {
+    
     if (location.hostname.indexOf('alipay.im') > 0) {
 
         var GitlabBaseUrl = "http://git.alipay.im";
@@ -56,7 +54,8 @@ define(function(require) {
             if (e.keyCode === 13) {
                 location.href = 'http://' + location.hostname + '/' + $('.document-index li:visible a')[0].innerHTML;
             }
-        }).focus()
+        }).focus();
     }
+
 });
 
