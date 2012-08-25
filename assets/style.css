@@ -5,6 +5,7 @@
 .container {
     width: 88%;
     margin: 0 auto;
+    overflow: hidden;
 }
 #header {
     padding: 20px 0;
