@@ -7,7 +7,7 @@ seajs.use('$', function($) {
         // 更改源码的对应地址
         var code = $('#code-link');
         if (code.length) {
-            code.attr('href', code.attr('href').replace('https://github.com/aralejs', GitlabBaseUrl));
+            code.attr('href', location.replace('arale2.alipay.im', 'git.alipay.im'));
         }
 
         // 将用例的链接设为新窗口打开，主页设为本窗口打开
