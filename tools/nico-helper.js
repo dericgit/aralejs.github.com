@@ -68,9 +68,9 @@ seajs.use('$', function($) {
             }); 
         }).on('keypress', function(e) {
             if (e.keyCode === 13) {
-                location.href = 'http://' + location.hostname + '/' + $('.document-index li:visible a')[0].innerHTML;
+                location.href = $('.document-index li:visible a')[0].attr('href');
             }
-        }).focus();
+        });
         
     }
 
