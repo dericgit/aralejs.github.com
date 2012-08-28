@@ -14,14 +14,6 @@ seajs.use('$', function($) {
         $('#nav-test').attr('target', '_blank');
         $('#logo').attr('target', '');
         $('#code-link').attr('target', '_blank');
-        
-
-        // 去掉gitlab下的icon
-        /*
-        $('#nav a').each(function(index, item) {
-            item.className = '';
-        });
-        */
 
         // 增加一个全局导航触发点
         $('#main .container').append($(
@@ -68,7 +60,7 @@ seajs.use('$', function($) {
             }); 
         }).on('keypress', function(e) {
             if (e.keyCode === 13) {
-                location.href = $('.document-index li:visible a')[0].attr('href');
+                location.href = $('.document-index li:visible a').getAttribute('href');
             }
         });
         
