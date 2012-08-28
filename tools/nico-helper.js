@@ -49,6 +49,7 @@ seajs.use('$', function($) {
                 $('#update').before($(html));
                 
                 $('.document-index').show();
+                $('#search').focus();
             });
         }, 'json');
 
