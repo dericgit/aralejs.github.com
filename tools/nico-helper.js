@@ -60,7 +60,7 @@ seajs.use('$', function($) {
             }); 
         }).on('keypress', function(e) {
             if (e.keyCode === 13) {
-                location.href = $('.document-index li:visible a').getAttribute('href');
+                location.href = $('.document-index li:visible a')[0].getAttribute('href');
             }
         });
         
