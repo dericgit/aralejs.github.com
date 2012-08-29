@@ -1,6 +1,6 @@
 seajs.use('$', function($) {
     
-    if (location.hostname.indexOf('alipay.im') > 0) {
+    if (location.hostname.indexOf('alipay.im') >= 0) {
 
         var GitlabBaseUrl = "http://git.alipay.im";
 
@@ -66,9 +66,10 @@ seajs.use('$', function($) {
             }
         }); 
     }
-    else if (location.hostname.indexOf('127.0.0.1') > 0) {
+    else if (location.hostname.indexOf('127.0.0.1') >= 0) {
         $('#main .container').append($(
             '<div class="document-index">这尼玛是本地调试环境吧！</div>'));
+        $('.document-index').show();
     }
 
 });
