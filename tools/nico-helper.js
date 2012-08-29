@@ -7,7 +7,8 @@ seajs.use('$', function($) {
         // 更改源码的对应地址
         var code = $('#code-link');
         if (code.length) {
-            code.attr('href', location.href.replace('arale2.alipay.im', 'git.alipay.im'));
+            var projectUrl = location.href.match(/^http:\/\/arale2\.alipay\.im\/[^\/.]*\//);
+            code.attr('href', projectUrl.replace('arale2.alipay.im', 'git.alipay.im'));
         }
 
         // 将用例的链接设为新窗口打开，主页设为本窗口打开
@@ -65,6 +66,10 @@ seajs.use('$', function($) {
             }
         });
         
+    }
+    else if (location.hostname.indexOf('127.0.0.1') > 0) {
+        $('#main .container').append($(
+            '<div class="document-index">这尼玛是本地调试环境吧！</div>'));
     }
 
 });
