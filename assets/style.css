@@ -24,7 +24,9 @@
 }
 #header a {
     color: #969998;
-    padding: 4px 6px;
+    padding: 0 6px;
+    float: left;
+    display: inline;
     margin: 0 4px;
 }
 #header a:hover {
