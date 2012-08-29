@@ -7,7 +7,7 @@ seajs.use('$', function($) {
         // 更改源码的对应地址
         var code = $('#code-link');
         if (code.length) {
-            var projectUrl = location.href.match(/^http:\/\/arale2\.alipay\.im\/[^\/.]*\//);
+            var projectUrl = location.href.match(/^http:\/\/arale2\.alipay\.im\/[^\/.]*\//)[0];
             code.attr('href', projectUrl.replace('arale2.alipay.im', 'git.alipay.im'));
         }
 
