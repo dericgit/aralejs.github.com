@@ -28,6 +28,7 @@
     float: left;
     display: inline;
     margin: 0 4px;
+    font-size:18px;
 }
 #header a:hover {
     color: #fff;
