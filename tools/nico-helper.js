@@ -64,8 +64,7 @@ seajs.use('$', function($) {
             if (e.keyCode === 13) {
                 location.href = $('.document-index li:visible a')[0].getAttribute('href');
             }
-        });
-        
+        }); 
     }
     else if (location.hostname.indexOf('127.0.0.1') > 0) {
         $('#main .container').append($(
