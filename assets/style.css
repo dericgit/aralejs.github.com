@@ -99,7 +99,6 @@
     font-weight: bold;
     -webkit-font-smoothing: antialiased;
     cursor: text;
-    position: relative;
 }
 .markdown-body h1 {
     font-size:28px;
