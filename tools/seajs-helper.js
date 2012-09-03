@@ -36,7 +36,7 @@
       url = url.replace(GITHUB_BASE, 'http://git.alipay.im/')
 
       // 将 alipay/xbox 这样的链接转成 alipay_xbox
-      var match = url.match(/http:\/\/git\.alipay\.im\/(.*?)\/[\d\.]+/)
+      var match = url.match(/http:\/\/git\.alipay\.im\/(.*?)\/[\d\.|master]+/)
       if (match && match.length == 2) {
         var m = match[1]
         url = url.replace(m, m.split('/').join('_'))
