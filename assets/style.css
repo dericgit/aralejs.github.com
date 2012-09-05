@@ -184,7 +184,13 @@
 .markdown-body .examples {
     font:12px/1.5 tahoma,arial,"Hiragino Sans GB",宋体;
 }
-.markdown-body .examples * {
+.markdown-body .examples h1,
+.markdown-body .examples h2,
+.markdown-body .examples h3,
+.markdown-body .examples ul,
+.markdown-body .examples ol,
+.markdown-body .examples p
+{
     margin:0;
     padding:0;
     list-style:none;
