@@ -177,6 +177,10 @@
     border-left: 5px solid #CCC;
     padding-left: 10px;
 }
+.markdown-body em, .markdown-body i {
+    font-style: italic;
+}
+
 .examples {
     font:12px/1.5 tahoma,arial,"Hiragino Sans GB",宋体;
 }
