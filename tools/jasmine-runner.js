@@ -1,4 +1,4 @@
-seajs.use(['../package.json', 'jasmine/1.1.0/jasmine-html', 'http://aralejs.org/tools/jasmine-jasmine.js'], function(meta) {
+seajs.use(['../package.json', 'jasmine/1.1.0/jasmine-html', 'http://aralejs.org/tools/jasmine-jquery.js'], function(meta) {
 
   var jasmineEnv = getJasmineEnv()
 
