@@ -1,6 +1,9 @@
-seajs.use(['../package.json', 'jasmine/1.1.0/jasmine-html'], function(meta) {
+seajs.use(['../package.json', 'jasmine/1.1.0/jasmine-html', 'http://aralejs.org/tools/jasmine-jquery.js'], function(meta) {
 
   var jasmineEnv = getJasmineEnv()
+
+  // jasmine-jquery 配置
+  jasmine.getFixtures().fixturesPath = 'fixtures'
 
   // 让 Jasmine 从文艺青年变成普通青年
   this.test = it
