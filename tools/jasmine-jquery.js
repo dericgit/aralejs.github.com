@@ -1,6 +1,7 @@
 define('#jasmine-jquery/1.4.2/jasmine-jquery-debug', ['$'], function(require) {
 
   var jQuery = require('$');
+  var $ = jQuery;
 
   var readFixtures = function() {
   return jasmine.getFixtures().proxyCallTo_('read', arguments)
