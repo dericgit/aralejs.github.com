@@ -122,7 +122,7 @@ seajs.use('$', function($) {
     });
 
     // 载入组件信息
-    $.get('/info.json', function(data) {
+    $.get('/json/info.json', function(data) {
       $(['arale', 'alipay', 'alice']).each(function(i, item) {
         var html = '<h2>' + item + '</h2><ul class="document-section fn-clear">',
         projects = data[item];
