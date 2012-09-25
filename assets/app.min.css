@@ -369,9 +369,16 @@ body {
     list-style-type: decimal;
 }
 .markdown-body ul {
-    padding-left: 10px;
-    list-style-type: none;
+    padding-left: 20px;
+    list-style-type: disc;
 }
+.markdown-body li {
+    margin-bottom: 8px;
+}
+.markdown-body li ul {
+    list-style-type: circle;
+}
+/*
 .markdown-body ul li:before {
     content: "•";
     padding: 0 5px;
@@ -379,6 +386,7 @@ body {
     vertical-align: middle;
     color: #ccc;
 }
+*/
 .markdown-body p, .markdown-body blockquote, .markdown-body ul, .markdown-body ol, .markdown-body dl, .markdown-body table, .markdown-body pre {
     margin: 8px 0;
 }
