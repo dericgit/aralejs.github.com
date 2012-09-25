@@ -338,8 +338,11 @@ body {
 .markdown-body .entry-description {
     color: #888;
 }
-.markdown-body h3 {
+.markdown-body h2 {
     margin-top: 40px;
+}
+.markdown-body h3 {
+    margin-top: 20px;
 }
 .markdown-body h4 {
     font-weight: bold;
