@@ -188,9 +188,6 @@ body .fn-hide {
     margin: 0 auto;
     zoom: 1;
 }
-body {
-    background-color: #f7f9f5;
-}
 /* layout */
 #header {
     background: #1b1b1b url(img/bg-line.jpg) repeat-x 0 100%;
@@ -247,7 +244,7 @@ body {
     background-position: 0 -338px;
 }
 #header .top-nav a {
-    color: #999;
+    color: #ccc;
     display: inline-block;
     -webkit-font-smoothing: antialiased;
     padding: 3px 12px;
